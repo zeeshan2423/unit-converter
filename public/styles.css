@@ -1,0 +1,198 @@
+/* 
+  General styling for the entire page 
+  - Sets the font style
+  - Centers the content with auto margins
+  - Adds a background color for a cleaner look
+*/
+body {
+  font-family: 'Comic Sans MS', cursive;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(249, 250, 251);
+}
+
+/* 
+  Styling for the main heading 
+  - Adjusts font size, color, and alignment for better readability
+*/
+h1 {
+  color: rgb(29, 29, 29);
+  text-align: start;
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+/* 
+  Navigation bar styling 
+  - Positions navigation links properly
+  - Adds spacing for a clean UI
+*/
+nav {
+  text-align: start;
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+
+/* 
+  Styling for navigation links 
+  - Adds spacing, font size, and transitions for smooth hover effects
+*/
+nav a {
+  text-decoration: none;
+  color: rgb(29, 29, 29);
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: all 0.3s;
+  margin-right: 25px;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* 
+  Active state for navigation links 
+  - Highlights the selected page 
+*/
+nav a.active {
+  color: rgb(75, 100, 225);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+/* 
+  Hover effect for navigation links 
+  - Changes text color for better interaction
+*/
+nav a:hover {
+  color: rgb(75, 100, 225);
+}
+
+/* 
+  Form field grouping
+  - Adds spacing for better separation of input fields
+*/
+.form-group {
+  margin: 20px 0;
+}
+
+/* 
+  Label styling 
+  - Improves readability with proper spacing and font adjustments
+*/
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgb(29, 29, 29);
+  font-size: 1.1em;
+}
+
+/* 
+  Input field styling 
+  - Adds padding, border styles, and background color
+  - Ensures a consistent look with other elements
+*/
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgb(29, 29, 29);
+  background-color: rgb(249, 250, 251);
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: 'Comic Sans MS', cursive;
+  appearance: none;
+  box-sizing: border-box;
+  border-width: 2px;
+}
+
+/* 
+  Dropdown (select) field styling
+  - Matches input fields for a consistent UI
+*/
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgb(29, 29, 29);
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: rgb(249, 250, 251);
+  font-family: 'Comic Sans MS', cursive;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+/* 
+  Hover effect for dropdowns 
+  - Darkens the border for a better visual cue
+*/
+select:hover {
+  border-color: rgb(29, 29, 29);
+}
+
+/* 
+  Button styling 
+  - Makes buttons more interactive with hover effects
+  - Adds padding and font adjustments for better usability
+*/
+button {
+  color: rgb(29, 29, 29);
+  padding: 12px 40px;
+  border: 2px solid rgb(29, 29, 29);
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Comic Sans MS', cursive;
+  background-color: transparent;
+}
+
+/* 
+  Button hover effect 
+  - Subtle background color change for user feedback
+*/
+button:hover {
+  background-color: rgb(249, 250, 251);
+}
+
+/* 
+  Styling for the result display section
+  - Increases font size for emphasis
+  - Adjusts padding and margins for proper alignment
+*/
+.result-text {
+  font-size: 1.75em;
+  color: rgb(29, 29, 29);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background: rgb(249, 250, 251);
+  border-radius: 8px;
+  text-align: start;
+  font-weight: 800;
+}
+
+/* 
+  Removes spinner controls from number input fields (Chrome & Safari)
+*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 
+  Container styling 
+  - Adds padding and border for a card-like appearance
+*/
+.container {
+  display: block;
+  margin-top: 30px;
+  padding: 30px;
+  background: rgb(249, 250, 251);
+  border-radius: 10px;
+  border: 2px solid rgb(29, 29, 29);
+}

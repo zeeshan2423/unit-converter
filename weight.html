@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weight Converter</title>
+
+    <!-- Link to external CSS file for consistent styling -->
+    <link rel="stylesheet" href="/styles.css" />
+
+    <style>
+      /* Initially hide the result section until conversion is performed */
+      #resultSection {
+        display: none;
+        background: rgb(249, 250, 251);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Unit Converter</h1>
+
+      <!-- Navigation menu to switch between different unit conversions -->
+      <nav>
+        <a href="/">Length</a>
+        <a href="/weight" class="active">Weight</a>
+        <a href="/temperature">Temperature</a>
+      </nav>
+
+      <!-- Section for user input to perform the weight conversion -->
+      <div id="conversionSection">
+        <form method="POST" action="/weight">
+          <!-- Input field for entering the weight value -->
+          <div class="form-group">
+            <label>Enter the weight to convert</label>
+            <input type="number" name="value" step="any" required />
+          </div>
+
+          <!-- Dropdown to select the unit of the input value -->
+          <div class="form-group">
+            <label>Unit to Convert from</label>
+            <select name="fromUnit" required>
+              <option value="" disabled selected></option>
+              <option value="milligram">Milligram</option>
+              <option value="gram">Gram</option>
+              <option value="kilogram">Kilogram</option>
+              <option value="ounce">Ounce</option>
+              <option value="pound">Pound</option>
+            </select>
+          </div>
+
+          <!-- Dropdown to select the target unit for conversion -->
+          <div class="form-group">
+            <label>Unit to Convert to</label>
+            <select name="toUnit" required>
+              <option value="" disabled selected></option>
+              <option value="milligram">Milligram</option>
+              <option value="gram">Gram</option>
+              <option value="kilogram">Kilogram</option>
+              <option value="ounce">Ounce</option>
+              <option value="pound">Pound</option>
+            </select>
+          </div>
+
+          <!-- Submit button to trigger the weight conversion process -->
+          <button type="submit">Convert</button>
+        </form>
+      </div>
+
+      <!-- Placeholder for dynamically displaying the conversion result -->
+      <!-- RESULT -->
+    </div>
+  </body>
+</html>
