@@ -11,15 +11,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Routes for Length Conversion
-app.get('/', (req, res) => servePage('length.html', res));
+app.get('/', (req, res) => servePage('./views/length.html', res));
 app.post('/', (req, res) => handleConversion('length', req, res));
 
 // Routes for Weight Conversion
-app.get('/weight', (req, res) => servePage('weight.html', res));
+app.get('/weight', (req, res) => servePage('./views/weight.html', res));
 app.post('/weight', (req, res) => handleConversion('weight', req, res));
 
 // Routes for Temperature Conversion
-app.get('/temperature', (req, res) => servePage('temperature.html', res));
+app.get('/temperature', (req, res) => servePage('./views/temperature.html', res));
 app.post('/temperature', (req, res) => handleConversion('temperature', req, res));
 
 /**
@@ -67,7 +67,7 @@ function handleConversion(type, req, res) {
     }
     
     // Read the respective HTML file and inject the conversion result
-    fs.readFile(`${type}.html`, 'utf8', (err, data) => {
+    fs.readFile(`./views/${type}.html`, 'utf8', (err, data) => {
       if (err) throw err;
       
       const resultHtml = `
